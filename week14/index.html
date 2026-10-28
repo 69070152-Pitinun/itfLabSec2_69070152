@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile Card and Todo List</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f7f7f7;
+            font-family: 'Kanit', sans-serif;
+            color: #333;
+        }
+
+        .card {
+            width: 800px;
+            padding: 40px;
+            display: flex;
+            gap: 40px;
+            background: linear-gradient(135deg, #87f8cf, hsl(282, 100%, 85%));
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .profile {
+            flex: 1;
+            text-align: center;
+            padding-right: 40px;
+            border-right: 2px solid rgba(255, 255, 255, 0.7);
+        }
+
+        .profile img {
+            width: 130px;
+            height: 130px;
+            object-fit: cover;
+            object-position: center 20%;
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .profile h2 {
+            margin: 12px 0 5px;
+        }
+
+        .profile p {
+            margin: 6px 0;
+            font-size: 14px;
+        }
+
+        .profile a {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 7px 16px;
+            background: rgba(255, 255, 255, 0.7);
+            color: #5e35b1;
+            text-decoration: none;
+            border-radius: 20px;
+        }
+
+        .todo {
+            flex: 1.2;
+        }
+
+        .todo h2 {
+            margin-top: 0;
+        }
+
+        #todo_input {
+            width: 70%;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            font-family: 'Kanit', sans-serif;
+        }
+
+        button {
+            padding: 7px 12px;
+            border: none;
+            border-radius: 8px;
+            font-family: 'Kanit', sans-serif;
+            cursor: pointer;
+        }
+
+        #add_btn {
+            background: #333;
+            color: white;
+        }
+
+        .todo ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .todo li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            padding: 10px 14px;
+            background: rgba(255, 255, 255, 0.55);
+            border-radius: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+
+        <div class="profile">
+            <img src="my_profile.jpg" alt="Profile">
+
+            <h2>Pitinun Pratis</h2>
+
+            <p>Student ID : 69070152</p>
+            <p>IT KMITL</p>
+
+            <p>
+                BNK48 & CGM48 fan - Kwan Oshi ♡ <br>
+                I love music, novels, cats and sleeping.
+            </p>
+
+            <a href="https://www.instagram.com/be.b_iw/" target="_blank">
+                Contact IG
+            </a>
+        </div>
+
+        <div class="todo">
+            <h2>To-do List</h2>
+
+            <input
+                type="text"
+                id="todo_input"
+                placeholder="พิมพ์สิ่งที่ต้องทำ..."
+            >
+            <button id="add_btn">เพิ่ม</button>
+
+            <ul id="todo_list"></ul>
+        </div>
+
+    </div>
+
+</body>
+<script src="script.js"></script>
+</html>
